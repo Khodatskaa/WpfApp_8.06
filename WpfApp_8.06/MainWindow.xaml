@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Enter the directory path:" Margin="10"/>
+        <TextBox x:Name="DirectoryPathTextBox" Grid.Row="0" Margin="10" Width="200" HorizontalAlignment="Left"/>
 
+        <TextBlock Text="Enter the word to search:" Grid.Row="1" Margin="10"/>
+        <TextBox x:Name="WordTextBox" Grid.Row="1" Margin="10" Width="200" HorizontalAlignment="Left"/>
+
+        <Button Content="Search Word in Directory" Click="SearchWordInDirectory_Click" Grid.Row="2" HorizontalAlignment="Center" Margin="10"/>
+
+        <ListBox x:Name="ResultsListBox" Grid.Row="3" Margin="10"/>
     </Grid>
 </Window>
