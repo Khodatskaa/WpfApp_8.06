@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <Button Content="Start Race" Click="StartRace_Click" HorizontalAlignment="Center" Margin="10"/>
+
+        <DataGrid x:Name="ResultsDataGrid" Grid.Row="1" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Horse" Binding="{Binding HorseName}"/>
+                <DataGridTextColumn Header="Position" Binding="{Binding Position}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <UniformGrid Grid.Row="2" x:Name="ProgressBarContainer" Columns="1"/>
     </Grid>
 </Window>
