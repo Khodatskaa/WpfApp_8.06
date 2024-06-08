@@ -7,6 +7,41 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <StackPanel>
+            <TextBlock Text="Thread Priorities:" FontWeight="Bold" Margin="10"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Numbers:" Width="70"/>
+                <ComboBox x:Name="NumberPriorityComboBox" Width="120" Margin="5">
+                    <ComboBoxItem>Lowest</ComboBoxItem>
+                    <ComboBoxItem>BelowNormal</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">Normal</ComboBoxItem>
+                    <ComboBoxItem>AboveNormal</ComboBoxItem>
+                    <ComboBoxItem>Highest</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Letters:" Width="70"/>
+                <ComboBox x:Name="LetterPriorityComboBox" Width="120" Margin="5">
+                    <ComboBoxItem>Lowest</ComboBoxItem>
+                    <ComboBoxItem>BelowNormal</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">Normal</ComboBoxItem>
+                    <ComboBoxItem>AboveNormal</ComboBoxItem>
+                    <ComboBoxItem>Highest</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Symbols:" Width="70"/>
+                <ComboBox x:Name="SymbolPriorityComboBox" Width="120" Margin="5">
+                    <ComboBoxItem>Lowest</ComboBoxItem>
+                    <ComboBoxItem>BelowNormal</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">Normal</ComboBoxItem>
+                    <ComboBoxItem>AboveNormal</ComboBoxItem>
+                    <ComboBoxItem>Highest</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <Button x:Name="StartButton" Content="Start" Click="StartButton_Click" Margin="10" Width="100"/>
+            <Button x:Name="StopButton" Content="Stop" Click="StopButton_Click" Margin="10" Width="100" IsEnabled="False"/>
+            <TextBox x:Name="OutputTextBox" Margin="10" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Height="150"/>
+        </StackPanel>
     </Grid>
 </Window>
